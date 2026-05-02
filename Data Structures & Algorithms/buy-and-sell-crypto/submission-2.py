@@ -1,0 +1,11 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        n = len(prices)
+        # Brute Force
+        max_profit = 0
+        for i in range(n):
+            for j in range(i, n):
+                max_profit = max(max_profit, prices[j] - prices[i])
+        return max_profit
+        # Two Pointers
+        # Dynamic Programming
